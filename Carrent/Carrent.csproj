@@ -502,6 +502,8 @@
     <Content Include="Views\Cars\ViewCars.cshtml" />
     <Content Include="Views\Admin\AdminVehicle.cshtml" />
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
+    <Content Include="Views\Shared\MenuPartial.cshtml" />
+    <Content Include="Views\Admin\CarType.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

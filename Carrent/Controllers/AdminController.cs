@@ -20,6 +20,7 @@ namespace Carrent.Controllers
             return View();
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult AdminVehicle(CarInfo CarInfo)
         {
             var CarTypeList = db.CarTypes.ToList();
@@ -42,6 +43,13 @@ namespace Carrent.Controllers
 
             return Content("<script language= 'javascript' type= 'text/javascript'> alert('Car Added Successfully');</script>");
             
+        }
+
+        public ActionResult CarType(CarType Cartype)
+        {
+           db.CarTypes.Add(Cartype);
+            db.SaveChanges();
+            return View();
         }
     }
 }
